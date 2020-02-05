@@ -12,10 +12,10 @@ s.starttls()
 s.login("singhishita159@gmail.com", "Ishita@009")
 
 # message to be sent
-message = "Message_you_need_to_send"
+message = "let me tell ou im missing youy alot"
 
 # sending the mail
-s.sendmail("singhishita159@gmail.com", "singhishita1599@gmail.com", message)
+s.sendmail("singhishita159@gmail.com", "shantanushukla61@gmail.com", message)
 
 # terminating the session
 s.quit()

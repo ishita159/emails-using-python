@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 # me == my email address
 # you == recipient's email address
 me = "singhishita159@gmail.com"
-you = "singhishita1599@gmail.com"
+you = "shantanushukla61@gmail.com"
 
 # Create message container - the correct MIME type is multipart/alternative.
 msg = MIMEMultipart('alternative')
@@ -15,14 +15,14 @@ msg['From'] = me
 msg['To'] = you
 
 # Create the body of the message (a plain-text and an HTML version).
-text = "Hi!\nHow are you?\nHere is the link you wanted:\nhttp://www.python.org"
+text = "Hi!\nHow are you?\nHere is the link you wanted:\n https://www.epicreads.com/blog/16-extremely-romantic-quotes-you-should-say-to-your-love/sss"
 html = """\
 <html>
   <head></head>
   <body>
     <p>Hi!<br>
-       How are you?<br>
-       Here is the <a href="http://www.python.org">link</a> you wanted.
+       You need to love me more get it?<br>
+       Here is the <a href="https://www.epicreads.com/blog/16-extremely-romantic-quotes-you-should-say-to-your-love/">FROM LOVE</a> that you need to see today <3.
     </p>
   </body>
 </html>

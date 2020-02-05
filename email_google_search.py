@@ -8,8 +8,24 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
+import urllib2
+try:
+    from googlesearch import search
+except ImportError:
+    print("No module named 'google' found")
+
+# to search
+
+query = raw_input("Enter search query: ")
+for j in search(query, tld="co.in", num=10, stop=1, pause=2):
+    response = urllib2.urlopen(j)
+    with open('output.txt', 'w') as f:
+         f.write(response.read())
+
+
 fromaddr = "singhishita159@gmail.com"
 toaddr = "shantanushukla61@gmail.com"
+
 
 # instance of MIMEMultipart
 msg = MIMEMultipart()
@@ -30,8 +46,8 @@ body = "Baby Yoda has sent you something"
 msg.attach(MIMEText(body, 'plain'))
 
 # open the file to be sent
-filename = "Tutorial_EDIT.pdf"
-attachment = open("/home/ishita/Documents/Tutorial_EDIT.pdf", "rb")
+filename = "output.txt"
+attachment = open("/home/ishita/Documents/MyPrograms/emails_using_python/output.txt", "rb")
 
 # instance of MIMEBase and named as p
 p = MIMEBase('application', 'octet-stream')
