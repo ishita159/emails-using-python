@@ -17,10 +17,13 @@ except ImportError:
 # to search
 
 query = raw_input("Enter search query: ")
-for j in search(query, tld="co.in", num=10, stop=1, pause=2):
-    response = urllib2.urlopen(j)
-    with open('output.txt', 'w') as f:
-         f.write(response.read())
+sub_str = "python-tutorial"
+for j in search(query, tld="co.in", num=10, stop=10, pause=2):
+    if (j.find(sub_str) != -1):
+       # print(j)
+        response = urllib2.urlopen(j)
+        with open('output1.txt', 'w') as f:
+           f.write(response.read())
 
 
 fromaddr = "singhishita159@gmail.com"
